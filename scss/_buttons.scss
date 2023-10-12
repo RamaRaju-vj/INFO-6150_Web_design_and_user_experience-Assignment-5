@@ -1,0 +1,18 @@
+// _buttons.scss - mixin + inheritance
+@mixin button-style {
+    padding: 10px;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .primary-button {
+    @include button-style;
+    background-color: #0077cc;
+  }
+  
+  .secondary-button {
+    @include button-style;
+    background-color: #ff6600;
+  }
+  

@@ -1,0 +1,263 @@
+@charset "UTF-8";
+body {
+  background-color: black;
+  color: #fff;
+  font-family: "Sono", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #353535;
+  font-size: 3rem;
+  color: #fff;
+  box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.5rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  transition: all 500ms;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card:hover {
+  box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.175em, rgba(2, 8, 20, 0.08) 0px 0.175em 0.5em;
+  transform: translateY(-3px) scale(1.1);
+}
+
+body {
+  font-family: "Sono", sans-serif;
+  background-color: black;
+}
+
+.pricing-container, .pricing-container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 2rem;
+  width: 100%;
+}
+.pricing-container .pricing-plan, .pricing-container2 .pricing-plan {
+  flex: add(0, 1);
+  max-width: 400px;
+  padding: 20;
+  background-color: rgb(17, 4, 132);
+  border-radius: 5px;
+  text-align: center;
+}
+.pricing-container .pricing-plan .plan-title, .pricing-container2 .pricing-plan .plan-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: double(5px);
+}
+.pricing-container .pricing-plan .plan-price, .pricing-container2 .pricing-plan .plan-price {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: double(5px);
+}
+.pricing-container .pricing-plan .plan-features, .pricing-container2 .pricing-plan .plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.pricing-container .pricing-plan .plan-features li, .pricing-container2 .pricing-plan .plan-features li {
+  margin-bottom: double(10px);
+}
+.pricing-container .pricing-plan .plan-button, .pricing-container2 .pricing-plan .plan-button {
+  padding: 10;
+  background-color: #ff6600;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+}
+
+.primary-button {
+  padding: 10px;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  background-color: #0077cc;
+}
+
+.secondary-button {
+  padding: 10px;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  background-color: #ff6600;
+}
+
+.custom-button {
+  padding: 10px;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  background-color: #99cc33;
+}
+
+@media (max-width: 1000px) {
+  .pricing-container, .pricing-container2 {
+    flex-direction: column;
+    height: auto;
+  }
+}
+/* @at-root Directive: - sass feature*/
+body .container {
+  background-color: #f0f0f0;
+}
+
+.animated-grid {
+  height: 85vh;
+  margin-bottom: 200px;
+  display: grid;
+  gap: 1rem;
+  grid-template-areas: "a  b  c  d" "l  🌟 🌟 e" "k  🌟 🌟 f" "j  i  h  g";
+  grid-template-rows: repeat(4, 25%);
+  grid-template-columns: 240px auto auto 240px;
+  --stagger-delay: 100ms;
+}
+
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+    filter: hue-rotate(180deg);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: hue-rotate(0deg);
+  }
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/**/
+.pricing {
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  margin-bottom: 200px;
+}
+
+.pricing a {
+  text-decoration: none;
+  color: white;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333; /* Optional background color for the footer */
+  color: white; /* Text color for the footer */
+  padding: 10px; /* Add padding to the footer if needed */
+  text-align: center; /* Center the text horizontally */
+}
+
+/* Media query for footer and screens with a maximum width of 768px */
+@media (max-width: 768px) {
+  #footer {
+    background-color: #444; /* Change background color for smaller screens */
+  }
+}
+/* Media query for footer and screens with a minimum width of 1200px */
+@media (min-width: 1200px) {
+  #footer {
+    padding: 20px; /* Increase padding for larger screens */
+  }
+}
+.pricing {
+  text-align: center;
+  font-size: 24px;
+  color: white;
+  margin-top: 20px; /* Add margin as needed to control the vertical spacing */
+}
+
+.pricing a {
+  text-decoration: none; /* Removes the underline from the link text */
+}
+
+/*nesting + place holder* + interpolation*/
+.card {
+  background-color: rgb(1, 1, 1);
+  animation: cardEntrance 700ms ease-out;
+  animation-fill-mode: backwards;
+}
+
+.card:nth-child(1) {
+  grid-area: a;
+  animation-delay: calc(1 * 100ms);
+}
+
+.card:nth-child(2) {
+  grid-area: b;
+  animation-delay: calc(2 * 100ms);
+}
+
+.card:nth-child(3) {
+  grid-area: c;
+  animation-delay: calc(3 * 100ms);
+}
+
+.card:nth-child(4) {
+  grid-area: d;
+  animation-delay: calc(4 * 100ms);
+}
+
+.card:nth-child(5) {
+  grid-area: e;
+  animation-delay: calc(5 * 100ms);
+}
+
+.card:nth-child(6) {
+  grid-area: f;
+  animation-delay: calc(6 * 100ms);
+}
+
+.card:nth-child(7) {
+  grid-area: g;
+  animation-delay: calc(7 * 100ms);
+}
+
+.card:nth-child(8) {
+  grid-area: h;
+  animation-delay: calc(8 * 100ms);
+}
+
+.card:nth-child(9) {
+  grid-area: i;
+  animation-delay: calc(9 * 100ms);
+}
+
+.card:nth-child(10) {
+  grid-area: j;
+  animation-delay: calc(10 * 100ms);
+}
+
+.card:nth-child(11) {
+  grid-area: k;
+  animation-delay: calc(11 * 100ms);
+}
+
+.card:nth-child(12) {
+  grid-area: l;
+  animation-delay: calc(12 * 100ms);
+}
+
+.card:last-child {
+  grid-area: 🌟;
+  animation-delay: calc(13 * 100ms);
+}/*# sourceMappingURL=main.css.map */

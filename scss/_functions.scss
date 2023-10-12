@@ -1,0 +1,10 @@
+// Functions
+@function double($value) {
+    @return $value * 2;
+}
+
+/* @function Directives -sass feature*/
+@function add($a, $b) {
+    @return $a + $b;
+  }
+  
